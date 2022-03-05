@@ -1,0 +1,12 @@
+/* Set color variables */
+
+* {
+	padding: 0px;
+	margin: 0px;
+	--color: #ff00ff;
+	--bg-color: #00ff00;
+}
+
+body {
+	background-color: var(--color);
+}
