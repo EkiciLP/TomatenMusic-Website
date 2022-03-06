@@ -19,7 +19,7 @@ export class NavBar extends React.Component {
 			login: {
 				avatar_url: "https://pfps.gg/assets/pfps/4504-nezukodemonform.png",
 				name: "GayFish",
-				is_logged_in: false
+				is_logged_in: true
 			}
 		};
 	}
@@ -43,10 +43,16 @@ export class NavBar extends React.Component {
 				<a href="/" style={
 					{
 						textDecoration: "none",
-						padding: ".5rem 1rem",
+						// padding: ".5rem 1rem",
 						color: "var(--text-color)",
 					}
-				}>TomatenMusic (aka logo lol)</a>
+				}><img src="/logo.png" style={
+					{
+						width: "100%",
+						height: "3rem",
+						marginTop: ".25rem"
+					}
+				}/></a>
 				<div style={
 					{
 						display: "flex"
@@ -74,7 +80,8 @@ export class NavBar extends React.Component {
 								width: "3rem",
 								height: "3rem",
 								borderRadius: "50%",
-								marginLeft: ".5rem",
+								marginLeft: "1rem",
+								marginTop: ".25rem"
 							}
 						} onClick={event => {
 							event.preventDefault();
