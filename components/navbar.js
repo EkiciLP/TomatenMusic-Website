@@ -19,17 +19,7 @@ export class NavBar extends React.Component {
 			login: {
 				avatar_url: "https://pfps.gg/assets/pfps/4504-nezukodemonform.png",
 				name: "GayFish",
-				is_logged_in: true
-			},
-
-			a_style: {
-				marginLeft: ".8rem",
-				border: "1px solid var(--color)",
-				borderRadius: "1rem",
-				padding: ".5rem 1rem",
-				textDecoration: "none",
-				color: "var(--color)",
-				display: "inline-block",
+				is_logged_in: false
 			}
 		};
 	}
@@ -54,7 +44,7 @@ export class NavBar extends React.Component {
 					{
 						textDecoration: "none",
 						padding: ".5rem 1rem",
-						color: this.state.color
+						color: "var(--text-color)",
 					}
 				}>TomatenMusic (aka logo lol)</a>
 				<div style={
@@ -65,9 +55,14 @@ export class NavBar extends React.Component {
 					<div className="links">
 						{ this.state.links.map(link => {
 							return (
-								<a key={link.href} href={link.href} style={this.state.a_style}>
+								<button className="nav-button" onClick={
+									event => {
+										event.preventDefault();
+										window.location.href = link.href;
+									}
+								}>
 									{link.name}
-								</a>
+								</button>
 							);
 						})}
 					</div>
@@ -86,7 +81,14 @@ export class NavBar extends React.Component {
 							window.location.href = "/account";
 						}}/>
 					) : (
-						<a style={this.state.a_style}>Login</a>
+						<div>
+							<button className="nav-button" onClick={
+								event => {
+									event.preventDefault();
+									window.location.href = "/login";
+								}
+							}>Login</button>
+						</div>
 					)}
 				</div>
 			</nav>
