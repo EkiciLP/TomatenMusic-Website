@@ -34,3 +34,15 @@ body {
 p {
 	color: var(--text-color);
 }
+
+@media (max-width: 600px) {
+	.hide-small {
+		display: none!important;
+	}
+}
+
+@media (min-width: 600px) {
+	.hide-large {
+		display: none!important;
+	}
+}
