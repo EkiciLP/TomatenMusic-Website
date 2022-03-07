@@ -1,0 +1,48 @@
+/* Set color variables */
+
+* {
+	padding: 0px;
+	margin: 0px;
+	--color: #7a7a7a;
+	--bg-color: #444444;
+	--text-color: #ffffff;
+}
+
+body {
+	background-color: var(--color);
+}
+
+.nav-button {
+	margin-left: .8rem;
+	border: 1px solid var(--color);
+	border-radius: 1rem;
+	padding: .5rem 1rem;
+	text-decoration: none;
+	color: var(--color);
+	display: inline-block;
+	transform: translate(0%, -50%);
+	top: 50%;
+	position: relative;
+	background-color: var(--color);
+	color: var(--text-color);
+}
+
+.nav-button:hover {
+	background-color: var(--bg-color);
+}
+
+p {
+	color: var(--text-color);
+}
+
+@media (max-width: 600px) {
+	.hide-small {
+		display: none!important;
+	}
+}
+
+@media (min-width: 600px) {
+	.hide-large {
+		display: none!important;
+	}
+}
