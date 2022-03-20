@@ -19,7 +19,7 @@ export class NavBar extends React.Component {
 			login: {
 				avatar_url: "https://pfps.gg/assets/pfps/4504-nezukodemonform.png",
 				name: "GayFish",
-				is_logged_in: true
+				is_logged_in: false
 			},
 
 			show_mobile_selector: false
