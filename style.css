@@ -18,7 +18,6 @@ body {
 	border-radius: 1rem;
 	padding: .5rem 1rem;
 	text-decoration: none;
-	color: var(--color);
 	display: inline-block;
 	transform: translate(0%, -50%);
 	top: 50%;
@@ -33,6 +32,16 @@ body {
 
 p {
 	color: var(--text-color);
+}
+
+button {
+	border: 1px solid var(--bg-color);
+	border-radius: 1rem;
+	padding: .5rem 1rem;
+	text-decoration: none;
+	background-color: var(--bg-color);
+	color: var(--color);
+	font-size: larger;
 }
 
 @media (max-width: 600px) {
